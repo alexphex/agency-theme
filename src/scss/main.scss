@@ -1,0 +1,32 @@
+/**
+ * Main stylesheet.
+ *
+ * @package Agency_Theme
+ */
+
+// Variables
+$color-primary: #1a1a2e;
+$color-accent:  #e94560;
+$color-white:   #ffffff;
+$font-base:     'Inter', sans-serif;
+
+// Base
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: $font-base;
+    color: $color-primary;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}

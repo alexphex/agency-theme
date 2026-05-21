@@ -7,3 +7,4 @@ Thumbs.db
 *.swp
 *.log
 *.cache
+build/
