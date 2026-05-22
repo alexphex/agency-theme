@@ -47,6 +47,38 @@ get_header();
                     <?php the_content(); ?>
                 </div>
 
+                <div class="single-project__meta">
+                    <?php
+                    $client = get_post_meta( get_the_ID(), '_project_client', true );
+                    $year   = get_post_meta( get_the_ID(), '_project_year', true );
+                    $url    = get_post_meta( get_the_ID(), '_project_url', true );
+                    ?>
+
+                    <?php if ( $client ) : ?>
+                        <p class="single-project__meta-item">
+                            <strong><?php esc_html_e( 'Client:', 'agency-theme' ); ?></strong>
+                            <?php echo esc_html( $client ); ?>
+                        </p>
+                    <?php endif; ?>
+
+                    <?php if ( $year ) : ?>
+                        <p class="single-project__meta-item">
+                            <strong><?php esc_html_e( 'Year:', 'agency-theme' ); ?></strong>
+                            <?php echo esc_html( $year ); ?>
+                        </p>
+                    <?php endif; ?>
+
+                    <?php if ( $url ) : ?>
+                        <p class="single-project__meta-item">
+                            <strong><?php esc_html_e( 'Project URL:', 'agency-theme' ); ?></strong>
+                            <a href="<?php echo esc_url( $url ); ?>" target="_blank" rel="noopener noreferrer">
+                                <?php echo esc_html( $url ); ?>
+                            </a>
+                        </p>
+                    <?php endif; ?>
+
+                </div>
+
                 <footer class="single-project__footer">
                     <a href="<?php echo esc_url( get_post_type_archive_link( 'project' ) ); ?>">
                         <?php esc_html_e( '← Back to Projects', 'agency-theme' ); ?>
