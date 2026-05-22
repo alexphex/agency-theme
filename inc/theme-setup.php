@@ -39,3 +39,18 @@ function agency_theme_setup(): void {
     );
 }
 add_action( 'after_setup_theme', 'agency_theme_setup' );
+
+/**
+ * Modify main query for project archive.
+ *
+ * @param WP_Query $query The WP_Query instance.
+ */
+function agency_theme_modify_query( WP_Query $query ): void {
+    if ( ! is_admin() && $query->is_main_query() && $query->is_post_type_archive( 'project' ) ) {
+        $query->set( 'posts_per_page', 9 );
+        $query->set( 'orderby', 'date' );
+        $query->set( 'order', 'DESC' );
+    }
+}
+add_action( 'pre_get_posts', 'agency_theme_modify_query' );
+
