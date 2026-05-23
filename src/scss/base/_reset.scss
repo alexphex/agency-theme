@@ -1,0 +1,55 @@
+
+@use 'variables' as *;
+
+// Reset & Base Styles
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: $font-size-base;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: $font-base;
+    color: $color-primary;
+    line-height: 1.6;
+    background-color: $color-white;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    color: var(--color-accent, #{$color-accent});
+    text-decoration: none;
+    transition: $transition-base;
+
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-family: $font-base;
+}

@@ -1,0 +1,65 @@
+
+@use '../base/variables' as *;
+
+// Header
+
+.site-header {
+    background-color: $color-primary;
+    padding: $spacing-md 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.site-title {
+    color: $color-white;
+    font-size: $font-size-xl;
+    font-weight: 700;
+    text-decoration: none;
+
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+.site-branding {
+    img {
+        max-height: 40px;
+        width: auto;
+    }
+}
+
+.site-navigation {
+    .primary-menu {
+        display: flex;
+        align-items: center;
+        gap: $spacing-lg;
+
+        li a {
+            color: $color-white;
+            font-size: $font-size-sm;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: $transition-base;
+
+            &:hover {
+                color: var(--color-accent, #{$color-accent});
+                opacity: 1;
+            }
+        }
+    }
+}
+
+@media ( max-width: $bp-tablet ) {
+    .site-navigation {
+        display: none;
+    }
+}

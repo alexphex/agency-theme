@@ -4,29 +4,18 @@
  * @package Agency_Theme
  */
 
-// Variables
-$color-primary: #1a1a2e;
-$color-accent:  #e94560;
-$color-white:   #ffffff;
-$font-base:     'Inter', sans-serif;
-
 // Base
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+@use 'base/variables' as *;
+@use 'base/reset' as *;
+@use 'base/typography' as *;
 
-body {
-    font-family: $font-base;
-    color: $color-primary;
-    line-height: 1.6;
-}
+// Layout
+@use 'layout/header' as *;
+@use 'layout/footer' as *;
+@use 'layout/layout' as *;
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
+// Components
+@use 'components/card' as *;
+@use 'components/projects-grid' as *;
+
+

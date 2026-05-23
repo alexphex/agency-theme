@@ -1,0 +1,78 @@
+
+@use '../base/variables' as *;
+
+// Footer
+
+.site-footer {
+    background-color: $color-primary;
+    color: $color-white;
+    padding: $spacing-xl 0;
+    margin-top: $spacing-2xl;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: $spacing-md;
+    }
+}
+
+.site-footer__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: $spacing-md;
+}
+
+.site-footer__copy {
+    color: $color-white;
+    font-size: $font-size-sm;
+    margin-bottom: 0;
+}
+
+.site-footer__phone {
+    margin-bottom: 0;
+
+    a {
+        color: var(--color-accent, #{$color-accent});
+        font-size: $font-size-sm;
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+}
+
+.site-footer__address {
+    color: $color-gray;
+    font-size: $font-size-sm;
+    margin-bottom: 0;
+}
+
+.footer-menu {
+    display: flex;
+    gap: $spacing-lg;
+
+    li a {
+        color: $color-gray;
+        font-size: $font-size-sm;
+        transition: $transition-base;
+
+        &:hover {
+            color: $color-white;
+            opacity: 1;
+        }
+    }
+}
+
+@media ( max-width: $bp-tablet ) {
+    .site-footer__inner {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-menu {
+        flex-wrap: wrap;
+        gap: $spacing-md;
+    }
+}

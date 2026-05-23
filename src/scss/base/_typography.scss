@@ -1,0 +1,37 @@
+
+@use 'variables' as *;
+
+// Typography
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $font-base;
+    font-weight: 700;
+    line-height: 1.2;
+    color: $color-primary;
+    margin-bottom: $spacing-md;
+}
+
+h1 { font-size: $font-size-3xl; }
+h2 { font-size: $font-size-2xl; }
+h3 { font-size: $font-size-xl; }
+h4 { font-size: $font-size-lg; }
+
+p {
+    margin-bottom: $spacing-md;
+    color: $color-dark-gray;
+}
+
+strong {
+    font-weight: 700;
+}
+
+// Responsive typography
+@media ( max-width: $bp-tablet ) {
+    h1 { font-size: $font-size-2xl; }
+    h2 { font-size: $font-size-xl; }
+}

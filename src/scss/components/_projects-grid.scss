@@ -1,0 +1,116 @@
+
+@use '../base/variables' as *;
+
+// Projects Grid
+
+.archive-header {
+    padding: $spacing-xl 0 $spacing-lg;
+
+    .archive-title {
+        font-size: $font-size-3xl;
+        color: $color-primary;
+        margin-bottom: 0;
+    }
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat( 3, 1fr );
+    gap: $spacing-lg;
+    padding-bottom: $spacing-2xl;
+}
+
+// Single project page
+.single-project__header {
+    margin-bottom: $spacing-xl;
+}
+
+.single-project__title {
+    font-size: $font-size-3xl;
+    margin-bottom: $spacing-md;
+}
+
+.single-project__terms {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $spacing-xs;
+}
+
+.single-project__term {
+    background-color: $color-light-gray;
+    color: $color-dark-gray;
+    font-size: $font-size-sm;
+    padding: $spacing-xs $spacing-sm;
+    border-radius: $border-radius;
+
+    &:hover {
+        background-color: var(--color-accent, #{$color-accent});
+        color: $color-white;
+        opacity: 1;
+    }
+}
+
+.single-project__thumbnail {
+    margin-bottom: $spacing-xl;
+    border-radius: $border-radius;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.single-project__content {
+    margin-bottom: $spacing-xl;
+    max-width: 800px;
+}
+
+.single-project__meta {
+    background-color: $color-light-gray;
+    border-radius: $border-radius;
+    padding: $spacing-lg;
+    margin-bottom: $spacing-xl;
+    max-width: 400px;
+}
+
+.single-project__meta-item {
+    margin-bottom: $spacing-sm;
+    font-size: $font-size-sm;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.single-project__footer {
+    padding-top: $spacing-lg;
+    border-top: 1px solid $color-light-gray;
+
+    a {
+        color: $color-primary;
+        font-weight: 500;
+
+        &:hover {
+            color: var(--color-accent, #{$color-accent});
+            opacity: 1;
+        }
+    }
+}
+
+// Responsive
+@media ( max-width: $bp-desktop ) {
+    .projects-grid {
+        grid-template-columns: repeat( 2, 1fr );
+    }
+}
+
+@media ( max-width: $bp-mobile ) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .single-project__title {
+        font-size: $font-size-2xl;
+    }
+}

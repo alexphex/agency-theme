@@ -1,0 +1,16 @@
+
+@use '../base/variables' as *;
+
+// Container
+.container {
+    max-width: $container-width;
+    margin: 0 auto;
+    padding: 0 $spacing-lg;
+}
+
+// Main content area (Sticky footer)
+.site-main {
+    flex: 1;
+    padding: $spacing-xl 0;
+}
+
