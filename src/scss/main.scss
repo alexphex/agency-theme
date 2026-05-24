@@ -5,17 +5,19 @@
  */
 
 // Base
+@use 'base/fonts' as *;
 @use 'base/variables' as *;
 @use 'base/reset' as *;
 @use 'base/typography' as *;
 
 // Layout
+@use 'layout/layout' as *;
 @use 'layout/header' as *;
 @use 'layout/footer' as *;
-@use 'layout/layout' as *;
 
 // Components
+@use 'components/hero' as *;
+@use 'components/buttons' as *;
 @use 'components/card' as *;
 @use 'components/projects-grid' as *;
-
-
+@use 'components/page' as *;

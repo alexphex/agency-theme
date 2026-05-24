@@ -80,6 +80,49 @@ function agency_theme_customize_register( WP_Customize_Manager $wp_customize ): 
             )
         )
     );
+
+    // Hero Section
+    $wp_customize->add_section(
+        'agency_hero',
+        array(
+            'title'    => esc_html__( 'Hero Section', 'agency-theme' ),
+            'priority' => 20,
+        )
+    );
+
+    $wp_customize->add_setting(
+        'hero_title',
+        array(
+            'default'           => 'We Build Digital Products',
+            'sanitize_callback' => 'sanitize_text_field',
+        )
+    );
+
+    $wp_customize->add_control(
+        'hero_title',
+        array(
+            'label'   => esc_html__( 'Hero Title', 'agency-theme' ),
+            'section' => 'agency_hero',
+            'type'    => 'text',
+        )
+    );
+
+    $wp_customize->add_setting(
+        'hero_subtitle',
+        array(
+            'default'           => 'Web agency specializing in WordPress development, UI/UX design and digital marketing.',
+            'sanitize_callback' => 'sanitize_textarea_field',
+        )
+    );
+
+    $wp_customize->add_control(
+        'hero_subtitle',
+        array(
+            'label'   => esc_html__( 'Hero Subtitle', 'agency-theme' ),
+            'section' => 'agency_hero',
+            'type'    => 'textarea',
+        )
+    );
 }
 add_action( 'customize_register', 'agency_theme_customize_register' );
 

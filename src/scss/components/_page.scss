@@ -1,0 +1,57 @@
+@use '../base/variables' as *;
+
+.page-header {
+    padding: $spacing-xl 0 $spacing-lg;
+    border-bottom: 2px solid $color-light-gray;
+    margin-bottom: $spacing-xl;
+}
+
+.page-title {
+    font-size: $font-size-2xl;
+    color: $color-primary;
+    margin-bottom: 0;
+}
+
+.page-body {
+    max-width: 800px;
+    margin-bottom: $spacing-2xl;
+
+    p {
+        margin-bottom: $spacing-md;
+    }
+
+    h2 {
+        margin-top: $spacing-xl;
+    }
+
+    h3 {
+        margin-top: $spacing-lg;
+    }
+}
+
+// 404 Page
+.error-404 {
+    text-align: center;
+    padding: $spacing-2xl 0;
+}
+
+.error-404__title {
+    font-size: 120px;
+    color: $color-accent;
+    line-height: 1;
+    margin-bottom: $spacing-md;
+}
+
+.error-404__subtitle {
+    font-size: $font-size-2xl;
+    color: $color-primary;
+    font-weight: 700;
+    margin-bottom: $spacing-xl;
+}
+
+.error-404__content {
+    p {
+        color: $color-gray;
+        margin-bottom: $spacing-xl;
+    }
+}

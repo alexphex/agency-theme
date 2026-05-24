@@ -1,0 +1,38 @@
+@use '../base/variables' as *;
+
+// Buttons
+.btn {
+    display: inline-block;
+    padding: $spacing-md $spacing-xl;
+    border-radius: $border-radius;
+    font-size: $font-size-base;
+    font-weight: 600;
+    text-decoration: none;
+    transition: $transition-base;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.btn--primary {
+    background-color: var(--color-accent, #{$color-accent});
+    color: $color-white;
+    border-color: var(--color-accent, #{$color-accent});
+
+    &:hover {
+        background-color: transparent;
+        color: var(--color-accent, #{$color-accent});
+        opacity: 1;
+    }
+}
+
+.btn--secondary {
+    background-color: transparent;
+    color: $color-primary;
+    border-color: $color-primary;
+
+    &:hover {
+        background-color: $color-primary;
+        color: $color-white;
+        opacity: 1;
+    }
+}
