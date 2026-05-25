@@ -21,3 +21,4 @@ require_once AGENCY_THEME_DIR . '/inc/theme-setup.php';
 require_once AGENCY_THEME_DIR . '/inc/cpt.php';
 require_once AGENCY_THEME_DIR . '/inc/meta-fields.php';
 require_once AGENCY_THEME_DIR . '/inc/customizer.php';
+require_once AGENCY_THEME_DIR . '/inc/blocks.php'; 

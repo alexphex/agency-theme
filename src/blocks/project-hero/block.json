@@ -1,0 +1,38 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "agency-theme/project-hero",
+    "version": "1.0.0",
+    "title": "Project Hero",
+    "category": "theme",
+    "icon": "cover-image",
+    "description": "A hero banner block for project pages with customizable background color and title.",
+    "keywords": ["hero", "banner", "project"],
+    "textdomain": "agency-theme",
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Project Title"
+        },
+        "subtitle": {
+            "type": "string",
+            "default": "Project subtitle goes here"
+        },
+        "backgroundColor": {
+            "type": "string",
+            "default": "#1a1a2e"
+        },
+        "textColor": {
+            "type": "string",
+            "default": "#ffffff"
+        }
+    },
+    "supports": {
+        "html": false,
+        "align": ["wide", "full"]
+    },
+    "editorScript": "file:../../../build/index.js",
+    "editorStyle": "file:../../../build/index.css",
+    "style": "file:../../../build/style-index.css"    
+}
+

@@ -1,0 +1,12 @@
+.wp-block-agency-theme-project-hero {
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+
+    .project-hero__title,
+    .project-hero__subtitle {
+        &:focus {
+            outline: none;
+        }
+    }
+}

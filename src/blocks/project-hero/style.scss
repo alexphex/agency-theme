@@ -1,0 +1,27 @@
+.project-hero {
+    padding: 80px 0;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+
+    &__content {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 0 24px;
+        text-align: center;
+    }
+
+    &__title {
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 1.1;
+        margin-bottom: 16px;
+    }
+
+    &__subtitle {
+        font-size: 18px;
+        line-height: 1.6;
+        opacity: 0.85;
+        margin-bottom: 0;
+    }
+}
